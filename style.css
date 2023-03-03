@@ -1,0 +1,564 @@
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.contactEmailDiv{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgb(89, 129, 89);
+    color: rgb(250, 245, 245);
+}
+.contactEmailDiv i{
+    color: white;
+}
+.ee{
+    display: flex;
+    align-items: center;
+}
+.ee h5{
+    margin: 12px;
+    font-size: 15px;
+}
+
+.header{
+    min-height: 100vh;
+    width: 100%;
+    background color: darkblue;
+    background-image: url(images/banner.png);
+    background-position: center;
+    background-size: cover;
+    position: relative; 
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width: 150px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+    
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+.active, .nav-links ul li:hover{
+    background-color: rgb(118, 226, 142);
+    border-radius: 3px;  
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 13px;
+}
+/*.nav-links ul li:after{
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: yellow;
+    display: block;
+    margin: auto;
+    transition: 0.5sec
+}*/
+.nav-links ul li:hover::after{
+    width: 100%; 
+}
+.nav-links ul li .fa{
+    color: white;
+    display: contents;
+}
+.sub-link-1{
+    display: none;
+}
+.nav-links ul li:hover .sub-link-1{
+    display: block;
+    position: absolute;
+    background-color: rgb(105, 114, 107);
+    margin-top: 10px;
+    margin-left: -10px;
+}
+.nav-links ul li:hover .sub-link-1 ul{
+    display: block;
+    margin: 10px;
+}
+.nav-links ul li:hover .sub-link-1 ul li{
+    width: 150px;
+    padding: 10px;
+    border-bottom: 1px dotted rgb(240, 221, 221);
+    background: transparent;
+    border-radius: 0;
+    text-align: left;
+}
+.nav-links ul li:hover .sub-link-1 ul li:last-child{
+    border-bottom: none;
+}
+.nav-links ul li:hover .sub-link-1 ul li a:hover{
+    color: rgb(238, 3, 3);
+}
+
+.text-box{
+    width: 90%;
+    color: black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;   
+}
+.text-box h1{
+    font-size: 40px;
+}
+.text-box p{
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: black;
+}
+.here-btn{
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    border: 1.5px solid white;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+}
+.here-btn:hover{
+    border: 1px solid brown;
+    background: brown;
+    transition: 1s;   
+}
+
+nav .fa{
+    display: none;
+    
+}
+
+@media(max-width: 700px){
+    .text-box h1{
+        font-size: 18px;
+    }
+    .nav-links ul li{
+        display: block;
+    }
+    .nav-links{
+        position: absolute;
+        background: red;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        right: -200px;
+        text-align: left;
+        z-index: 2;
+        transition: 1s;
+    }
+    nav .fa{
+        display: block;
+        color: white;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    .nav-links ul{
+        padding: 30px;
+    }
+}
+
+/*------ course ------*/
+
+.course{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;       
+}
+h1{
+    font-size: 36px;
+    font-weight: 600;
+}
+
+p{
+    color: black;
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 22px;
+    padding: 10px;
+}
+
+
+.row{
+    margin-top: 5%;
+    display: flex;
+    justify-content: space-between;  
+}
+.course-col{
+    flex-basis: 31%;
+    background: #fff3f9;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 20px 12px;
+    box-sizing: border-box;
+    transition: 0.5sec;
+}
+.h3{
+    text-align: center;
+    font-weight: 600;
+    margin: 10px 0;
+}
+.course-col:hover{
+    box-shadow: 0 0 20px 0px;
+}
+@media(max-width: 700px){
+    .row{
+        flex-direction: column;
+    }
+    .h3{
+        text-align: left;
+        font-weight: 600;
+    }
+}
+
+/*-------- Adress ---------*/
+
+.Adress{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+.place-col{
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+.place-col img{
+    width: 100%;
+    display: block;
+}
+.layer{
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5sec;
+}
+.layer:hover{
+    background: rgba(226,0,0,0.1);
+}
+.layer h3{
+    width: 100%;
+    font-weight: 500;
+    color: white;
+    font-size: 26px;
+    bottom: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+    opacity: 0;
+    transition: 0.5sec;
+}
+.layer:hover h3{
+    bottom: 49%;
+    opacity: 1;
+}
+
+/*----------- Facilities-------------*/
+
+.facilities{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col{
+    flex-basis: 31%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;    
+}
+.facilities-col img{
+    width: 100%;
+    border-radius: 10px;  
+}
+.facilities-col p{
+    padding: 0;
+}
+.facilities-col h3{
+    margin-top: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+/*--------------- testimonials ----------------*/
+
+
+
+.testimonials{
+    width 80%;
+    margin: auto;
+    padding-top: 100px;
+    text-align: center;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.testimonial-col{
+    flex-basis: 44%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    text-align: left;
+    background: #fff3f6;
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+.testimonial-col img{
+    height: 65px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+.testimonial-col p{
+    padding: 0;    
+}
+.testimonial-col h3{
+    margin-top: 15px;
+    text-align: left;
+}
+.testimonial-col .fa{
+    color: #000080;
+}
+@media(max-width: 700px){
+    .testimonial-col img{
+        margin-left: 0px;
+        margin-right: 15px;
+    } 
+}
+
+/*----------- Call to Action----------*/
+
+.cta{
+    margin: 100px auto;
+    width: 80%;
+    background-image: url(images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    text-align: center;
+    padding: 100px 0;   
+}
+.cta h1{
+    color: #FFFFE0;
+    margin-bottom: 40px;
+    padding: 0;
+}
+.cta a{
+    color: #FFFFE0;
+    margin-bottom: 40px;
+    padding: 0; 
+}
+@media(max-width: 700px){
+    .cta h1{
+        font-size: 20px;
+    }
+}
+
+
+/*----Get To Know Us Better----*/
+
+.We{ 
+    background: #333338;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+}
+.container form{
+    background: white;
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+    
+}
+.container form h3{
+    color: rgb(126, 126, 177);
+    font-weight: 800px;
+    margin-bottom: 15px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.container form input, form textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: #fff3f6;
+    font-size: 12px;
+    font-weight: light bold;
+}
+.container form button{
+    padding: 15px;
+    background: #914d4d;
+    color: white;
+    font-size: 22px;
+    font-family: 'Times New Roman', Times, serif;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 120px;
+    margin: 5% auto 0;
+    border-radius: 18px;
+}
+
+
+
+
+/*---------- Footer ----------*/
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;
+}
+.footer h4{
+    margin-bottom: 25px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+.icons .fa{
+    color: red;
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+.fa-heart{
+    color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
